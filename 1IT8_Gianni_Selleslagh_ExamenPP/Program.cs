@@ -26,7 +26,8 @@ namespace _1IT8_Gianni_Selleslagh_ExamenPP
                 // DEEL 4 (Omdat dit het mooi maakt) :)
                 Console.WriteLine($"Wenst u opnieuw te beginnen?");
                 string answer = Console.ReadLine();
-                if (answer == "j")
+                const string EXPECTED_ANSWER = "j";
+                if (answer == EXPECTED_ANSWER)
                 {
                     keepGoing = true;
                 }
@@ -46,10 +47,10 @@ namespace _1IT8_Gianni_Selleslagh_ExamenPP
             Random rnd = new Random();
             char[] charArray = new char[100];
             const char FIRST = 'A';
-            const char LAST = '['; 
+            const char LAST = 'Z'; 
             for(int i = 0; i < 100; i++)
             {
-                char randomChar = (char)rnd.Next(FIRST, LAST);
+                char randomChar = (char)rnd.Next(FIRST, LAST+1);
                 charArray[i] = randomChar;
             }
             return charArray;
@@ -152,7 +153,8 @@ namespace _1IT8_Gianni_Selleslagh_ExamenPP
         /// <returns>Indien het aantal verdachte tekens een veelvoud van 3 is(inclusief 3) returned deze methode true, in alle andere gevallen false.</returns>
         static bool IsVerdacht(int amountVerdacht)
         {
-            if (amountVerdacht % 3 == 0)
+            const int MULTIPLE_TO_BE_SUSPICIOUS = 3;
+            if (amountVerdacht % MULTIPLE_TO_BE_SUSPICIOUS == 0)
             {
                 return true;
             }
