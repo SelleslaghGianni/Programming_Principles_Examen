@@ -1,0 +1,1 @@
+This was an exercise for an exam I took on the 18th of december. I had about 1 hour 30 minutes to finish it. The first commit is how I submitted it, other commits are improvements.
